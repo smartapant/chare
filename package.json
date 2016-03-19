@@ -29,6 +29,7 @@
     "gulp-minify-html": "~1.0.4",
     "gulp-inject": "~3.0.0",
     "gulp-protractor": "~1.0.0",
+    "gulp-favicons": "^2.2.6",
     "gulp-sourcemaps": "~1.6.0",
     "gulp-sass": "~2.0.4",
     "webpack-stream": "~2.1.1",

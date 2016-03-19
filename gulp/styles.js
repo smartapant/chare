@@ -13,7 +13,7 @@ var _ = require('lodash');
 
 gulp.task('styles-reload', ['styles'], function() {
   return buildStyles()
-    .pipe(browserSync.stream());
+      .pipe(browserSync.stream());
 });
 
 gulp.task('styles', function() {
@@ -42,13 +42,13 @@ var buildStyles = function() {
 
 
   return gulp.src([
-    path.join(conf.paths.src, '/app/index.scss')
+    path.join(conf.paths.sass, '/index.scss')
   ])
-    .pipe($.inject(injectFiles, injectOptions))
-    .pipe(wiredep(_.extend({}, conf.wiredep)))
-    .pipe($.sourcemaps.init())
-    .pipe($.sass(sassOptions)).on('error', conf.errorHandler('Sass'))
-    .pipe($.autoprefixer()).on('error', conf.errorHandler('Autoprefixer'))
-    .pipe($.sourcemaps.write())
-    .pipe(gulp.dest(path.join(conf.paths.tmp, '/serve/app/')));
+      .pipe($.inject(injectFiles, injectOptions))
+      .pipe(wiredep(_.extend({}, conf.wiredep)))
+      .pipe($.sourcemaps.init())
+      .pipe($.sass(sassOptions)).on('error', conf.errorHandler('Sass'))
+      .pipe($.autoprefixer()).on('error', conf.errorHandler('Autoprefixer'))
+      .pipe($.sourcemaps.write())
+      .pipe(gulp.dest(path.join(conf.paths.tmp, '/serve/app/')));
 };
