@@ -1,6 +1,10 @@
-### How do I get set up? ###
+# chare
 
-* npm install
-* bower install
-* gulp build
-* gulp serve
+## Installation
+
+Clone the repository and run the following commands under your project root:
+
+```shell
+npm install
+npm start
+```
