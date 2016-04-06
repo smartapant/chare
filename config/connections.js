@@ -15,39 +15,6 @@
 module.exports = {
   connections: {
     /**
-     * MongoDB configuration
-     * @type {Object}
-     */
-    mongo: {
-      adapter: 'sails-mongo',
-      host: 'localhost',
-      port: 27017,
-      user: '',
-      password: '',
-      database: 'sails-rest-api'
-    },
-
-    /**
-     * Redis configuration
-     * @type {Object}
-     */
-    redis: {
-      adapter: 'sails-redis',
-      port: 6379,
-      host: 'localhost',
-      password: '',
-      database: 'sails-rest-api',
-      options: {
-        parser: 'hiredis',
-        return_buffers: false,
-        detect_buffers: false,
-        socket_nodelay: true,
-        no_ready_check: false,
-        enable_offline_queue: true
-      }
-    },
-
-    /**
      * PostgreSQL configuration
      * @type {Object}
      */
@@ -75,85 +42,7 @@ module.exports = {
       database: 'chare',
       charset: 'utf8',
       collation: 'utf8_swedish_ci'
-    },
-
-    /**
-     * Microsoft SQL Server configuration
-     * @type {Object}
-     */
-    sqlserver: {
-      adapter: 'sails-sqlserver',
-      user: '',
-      password: '',
-      host: 'localhost',
-      database: 'sails-rest-api',
-      options: {
-        encrypt: false
-      }
-    },
-
-    /**
-     * OrientDB configuration
-     * @type {Object}
-     */
-    orientdb: {
-      adapter: 'sails-orientdb',
-      host: 'localhost',
-      port: 2424,
-      user: '',
-      password: '',
-      database: 'sails-rest-api',
-      options: {
-        databaseType: 'graph',
-        storage: 'plocal',
-        transport: 'binary',
-        decodeURIComponent: true,
-        removeCircularReferences: false,
-        unsafeDrop: false,
-        parameterized: true,
-        fetchPlanLevel: 1
-      }
-    },
-
-    /**
-     * DynamoDB configuration
-     * @type {Object}
-     */
-    dynamodb: {
-      adapter: 'sails-dynamodb',
-      accessKeyId: '',
-      secretAccessKey: '',
-      region: 'us-west-1'
-    },
-
-    /**
-     * FileMaker configuration
-     * @type {Object}
-     */
-    filemaker: {
-      adapter: 'sails-filemaker',
-      host: 'localhost',
-      database: 'sails-rest-api',
-      userName: '',
-      password: ''
-    },
-
-    /**
-     * Memory configuration
-     * ONLY FOR DEVELOPMENT
-     * @type {Object}
-     */
-    memory: {
-      adapter: 'sails-memory'
-    },
-
-    /**
-     * Disk configuration
-     * ONLY FOR DEVELOPMENT
-     * @type {Object}
-     */
-    disk: {
-      adapter: 'sails-disk'
     }
+
   }
 };
