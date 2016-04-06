@@ -43,7 +43,7 @@ module.exports = {
      * @param app Express application
      */
     customMiddleware: app => {
-      app.use('/', express.static(process.cwd() + '/public'));
+      app.use('/', express.static(process.cwd() + '/public/dist'));
     },
 
     /**
