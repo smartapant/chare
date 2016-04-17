@@ -42,7 +42,7 @@ module.exports = {
      * An optional mount path for all blueprint routes on a controller, including `rest`, `actions`, and `shortcuts`
      * @type {String}
      */
-    prefix: '/v1',
+    //prefix: '/v1',
 
     /**
      * An optional mount path for all blueprint routes on a controller, including only `rest`
@@ -54,7 +54,7 @@ module.exports = {
      * Whether to pluralize controller names in blueprint routes
      * @type {Boolean}
      */
-    pluralize: true,
+    //pluralize: true,
 
     /**
      * Whether the blueprint controllers should populate model fetches with data

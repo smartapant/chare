@@ -33,7 +33,7 @@ const LOCAL_STRATEGY_CONFIG = {
  */
 const JWT_STRATEGY_CONFIG = {
   secretOrKey: '4219f871e76cc2d4e48f7734ee552c2977cbb1c98bf2d3701744b6bec0f6eba2',
-  jwtFromRequest: ExtractJwt.versionOneCompatibility({tokenBodyField: 'access_token'}),
+  jwtFromRequest: request => request.headers["access_token"],
   tokenQueryParameterName: 'access_token',
   authScheme: 'Bearer',
   session: false,
