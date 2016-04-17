@@ -17,7 +17,8 @@ module.exports = {
     },
 
     password: {
-      type: 'string'
+      type: 'string',
+      required: 'true'
     },
 
     email: {
@@ -45,6 +46,11 @@ module.exports = {
     socialProfiles: {
       type: 'object',
       defaultsTo: {}
+    },
+
+    posts: {
+      collection: 'post',
+      via: 'owner'
     },
 
     toJSON() {
