@@ -4,7 +4,8 @@ export function routerConfig ($stateProvider, $urlRouterProvider) {
     .state('home', {
       url: '/',
       templateUrl: 'app/frontapge/frontpage.html',
-      controllerAs: 'main'
+      controller: 'FrontpageController',
+      controllerAs: 'frontpageCtrl'
     });
 
   $urlRouterProvider.otherwise('/');
